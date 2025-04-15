@@ -3,14 +3,10 @@ userfile='myuser.txt'
 user=[]
 
 def read_user():
- #global user
- #try:
+
    with open (userfile,'r') as user_file:
       json.load(user_file)
-    
-'''except json.JSONDecodeError:   
-    user=[]
-    print("file is empty")'''
+
 def write_user():
    with open (userfile,'w') as user_file:
       data=json.dump(user,user_file, indent=4)
